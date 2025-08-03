@@ -40,23 +40,75 @@ import Layout from '../layouts/BlogPost.astro';
 
 	<style>
 		.about-content {
-			max-width: 65ch;
+			max-width: 800px;
 			margin: 0 auto;
 		}
 		
-		section {
+		.bio-intro {
+			background: var(--card-bg);
+			padding: 2rem;
+			border-radius: 16px;
+			border: 1px solid var(--border-color);
+			box-shadow: var(--card-shadow);
 			margin-bottom: 2rem;
+			text-align: center;
+		}
+		
+		.bio-intro p {
+			font-size: 1.1rem;
+			color: var(--text-secondary);
+			line-height: 1.7;
+		}
+		
+		.bio-intro strong {
+			color: var(--accent-light);
+			font-size: 1.2rem;
+		}
+		
+		section {
+			background: var(--card-bg);
+			padding: 2rem;
+			border-radius: 16px;
+			border: 1px solid var(--border-color);
+			box-shadow: var(--card-shadow);
+			margin-bottom: 2rem;
+			transition: transform 0.3s ease;
+		}
+		
+		section:hover {
+			transform: translateY(-2px);
 		}
 		
 		h2 {
-			color: #333;
-			margin-bottom: 0.75rem;
-			border-bottom: 1px solid #eee;
+			color: var(--accent);
+			margin-bottom: 1rem;
+			font-size: 1.8rem;
+			border-bottom: 2px solid var(--border-color);
 			padding-bottom: 0.5rem;
 		}
 		
 		p {
-			line-height: 1.6;
+			line-height: 1.7;
+			color: var(--text-secondary);
+		}
+		
+		em {
+			color: var(--accent-light);
+			font-style: italic;
+		}
+		
+		@media (max-width: 768px) {
+			.about-content {
+				padding: 0 1rem;
+			}
+			
+			section, .bio-intro {
+				padding: 1.5rem;
+			}
+			
+			h2 {
+				font-size: 1.5rem;
+			}
 		}
 	</style>
 </Layout>

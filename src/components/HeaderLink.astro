@@ -18,9 +18,24 @@ const isActive = normalizedHref === normalizedPathname || (normalizedHref === '/
 	a {
 		display: inline-block;
 		text-decoration: none;
+		color: var(--text-secondary);
+		transition: all 0.3s ease;
+		position: relative;
 	}
+	
 	a.active {
-		font-weight: bolder;
-		text-decoration: underline;
+		color: var(--accent-light);
+		font-weight: 600;
+	}
+	
+	a.active::after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: var(--accent);
+		border-radius: 1px;
 	}
 </style>

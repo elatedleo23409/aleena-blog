@@ -3,21 +3,221 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+).slice(0, 3); // Get latest 3 posts for featured section
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			/* Hero Section */
+			.hero {
+				text-align: center;
+				padding: 6rem 0;
+				background: radial-gradient(circle at center, rgba(231, 76, 60, 0.1) 0%, transparent 70%);
+			}
+			
+			.hero h1 {
+				font-size: 4rem;
+				margin-bottom: 1rem;
+				background: linear-gradient(135deg, var(--accent), var(--accent-light));
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+			
+			.hero-subtitle {
+				font-size: 1.5rem;
+				color: var(--text-secondary);
+				margin-bottom: 2rem;
+				max-width: 600px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.cta-button {
+				background: var(--card-bg);
+				color: var(--text-primary);
+				padding: 1rem 2.5rem;
+				border: 1px solid var(--accent);
+				border-radius: 4px;
+				text-decoration: none;
+				font-weight: 400;
+				display: inline-block;
+				transition: all 0.2s ease;
+				font-family: "Georgia", "Times New Roman", serif;
+				letter-spacing: 0.5px;
+			}
+			
+			.cta-button:hover {
+				background: var(--accent);
+				color: var(--primary-bg);
+				border-color: var(--accent);
+			}
+			
+			/* Featured Posts Section */
+			.featured-posts {
+				padding: 4rem 0;
+			}
+			
+			.section-title {
+				text-align: center;
+				font-size: 2.5rem;
+				margin-bottom: 3rem;
+				color: var(--accent);
+			}
+			
+			.posts-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+				gap: 2rem;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
+			
+			.post-card {
+				background: var(--card-bg);
+				border-radius: 16px;
+				overflow: hidden;
+				transition: all 0.3s ease;
+				border: 1px solid var(--border-color);
+				box-shadow: var(--card-shadow);
+			}
+			
+			.post-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+			}
+			
+			.post-card img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+				border-radius: 0;
+			}
+			
+			.post-content {
+				padding: 1.5rem;
+			}
+			
+			.post-title {
+				font-size: 1.25rem;
+				margin-bottom: 0.5rem;
+				color: var(--text-primary);
+			}
+			
+			.post-date {
+				color: var(--text-muted);
+				font-size: 0.9rem;
+				margin-bottom: 1rem;
+			}
+			
+			.post-excerpt {
+				color: var(--text-secondary);
+				line-height: 1.6;
+			}
+			
+			/* About Preview Section */
+			.about-preview {
+				background: var(--secondary-bg);
+				padding: 4rem 0;
+				text-align: center;
+			}
+			
+			.about-content {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
+			
+			.about-content p {
+				font-size: 1.1rem;
+				margin-bottom: 2rem;
+			}
+			
+			@media (max-width: 768px) {
+				.hero h1 {
+					font-size: 2.5rem;
+				}
+				
+				.hero-subtitle {
+					font-size: 1.2rem;
+				}
+				
+				.posts-grid {
+					grid-template-columns: 1fr;
+					padding: 0 1rem;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>✨ Welcome to Aleena's Blog</h1>
-			<p>
-				Welcome to my blog where I explore the intersection of law, culture, and social justice. Here you'll find thoughts on legal frameworks, cultural preservation, and advocacy work.
-			</p>
-		</main>
+		
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="container">
+				<h1>Welcome to Aleena's Blog</h1>
+				<p class="hero-subtitle">
+					Exploring the intersection of law, culture, and social justice through thoughtful analysis and advocacy.
+				</p>
+				<a href="/aleena-blog/blog/" class="cta-button">Explore My Writings</a>
+			</div>
+		</section>
+		
+		<!-- Featured Posts Section -->
+		{posts.length > 0 && (
+			<section class="featured-posts">
+				<div class="container">
+					<h2 class="section-title">Latest Articles</h2>
+					<div class="posts-grid">
+						{posts.map((post) => (
+							<article class="post-card">
+								<a href={`/aleena-blog/blog/${post.id}/`}>
+									{post.data.heroImage && (
+										<Image 
+											width={400} 
+											height={200} 
+											src={post.data.heroImage} 
+											alt=""
+										/>
+									)}
+									<div class="post-content">
+										<h3 class="post-title">{post.data.title}</h3>
+										<p class="post-date">
+											<FormattedDate date={post.data.pubDate} />
+										</p>
+										<p class="post-excerpt">{post.data.description}</p>
+									</div>
+								</a>
+							</article>
+						))}
+					</div>
+				</div>
+			</section>
+		)}
+		
+		<!-- About Preview Section -->
+		<section class="about-preview">
+			<div class="about-content">
+				<h2 class="section-title">About Aleena</h2>
+				<p>
+					Legal practitioner, cultural advocate, and author working at the intersection of law, culture, and social justice. 
+					Through my writing and legal practice, I advocate for the protection of traditional cultural expressions and explore 
+					frameworks that honor India's diverse artistic legacy.
+				</p>
+				<a href="/aleena-blog/about/" class="cta-button">Learn More About Me</a>
+			</div>
+		</section>
+		
 		<Footer />
 	</body>
 </html>
