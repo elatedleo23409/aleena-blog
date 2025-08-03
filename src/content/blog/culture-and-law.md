@@ -551,7 +551,7 @@ tags:
       }
       .c12 {
         -webkit-text-decoration-skip: none;
-        color: #000000;
+        color: #cccccc;
         font-weight: 700;
         text-decoration: underline;
         vertical-align: baseline;
@@ -583,7 +583,7 @@ tags:
       }
       .c19 {
         margin-left: 36pt;
-        padding-top: 14pt;
+        padding-top: 6pt;
         padding-left: 0pt;
         padding-bottom: 0pt;
         line-height: 1.5;
@@ -593,7 +593,7 @@ tags:
       }
       .c21 {
         margin-left: 36pt;
-        padding-top: 14pt;
+        padding-top: 6pt;
         padding-left: 18pt;
         padding-bottom: 0pt;
         line-height: 1.5;
@@ -605,7 +605,7 @@ tags:
         margin-left: 36pt;
         padding-top: 0pt;
         padding-left: 18pt;
-        padding-bottom: 14pt;
+        padding-bottom: 6pt;
         line-height: 1.5;
         orphans: 2;
         widows: 2;
@@ -622,7 +622,7 @@ tags:
         text-align: left;
       }
       .c5 {
-        color: #000000;
+        color: #cccccc;
         font-weight: 400;
         text-decoration: none;
         vertical-align: baseline;
@@ -631,16 +631,16 @@ tags:
         font-style: italic;
       }
       .c1 {
-        color: #000000;
+        color: #cccccc;
         font-weight: 400;
         text-decoration: none;
         vertical-align: super;
-        font-size: 13pt;
+        font-size: 9pt;
         font-family: "Garamond";
         font-style: normal;
       }
       .c11 {
-        color: #000000;
+        color: #cccccc;
         font-weight: 400;
         text-decoration: none;
         vertical-align: baseline;
@@ -649,7 +649,7 @@ tags:
         font-style: normal;
       }
       .c0 {
-        color: #000000;
+        color: #cccccc;
         font-weight: 400;
         text-decoration: none;
         vertical-align: baseline;
@@ -660,14 +660,14 @@ tags:
       .c28 {
         margin-left: 36pt;
         padding-top: 0pt;
-        padding-bottom: 14pt;
+        padding-bottom: 6pt;
         line-height: 1.5;
         orphans: 2;
         widows: 2;
         text-align: left;
       }
       .c4 {
-        color: #000000;
+        color: #cccccc;
         font-weight: 400;
         text-decoration: none;
         vertical-align: baseline;
@@ -676,7 +676,7 @@ tags:
         font-style: italic;
       }
       .c3 {
-        color: #000000;
+        color: #cccccc;
         font-weight: 400;
         text-decoration: none;
         vertical-align: baseline;
@@ -686,25 +686,25 @@ tags:
       }
       .c2 {
         margin-left: 36pt;
-        padding-top: 14pt;
-        padding-bottom: 14pt;
+        padding-top: 6pt;
+        padding-bottom: 6pt;
         line-height: 1.5;
         orphans: 2;
         widows: 2;
         text-align: justify;
       }
       .c7 {
-        color: #000000;
+        color: #cccccc;
         font-weight: 400;
         text-decoration: none;
         vertical-align: baseline;
         font-size: 10pt;
-        font-family: "Calibri";
+        font-family: "Calibri"; color: #cccccc;
         font-style: normal;
       }
       .c35 {
-        padding-top: 9pt;
-        padding-bottom: 9pt;
+        padding-top: 3pt;
+        padding-bottom: 3pt;
         line-height: 1.5;
         orphans: 2;
         widows: 2;
@@ -719,8 +719,8 @@ tags:
         text-align: justify;
       }
       .c14 {
-        padding-top: 14pt;
-        padding-bottom: 14pt;
+        padding-top: 6pt;
+        padding-bottom: 6pt;
         line-height: 1.5;
         orphans: 2;
         widows: 2;
@@ -735,15 +735,15 @@ tags:
         text-align: justify;
       }
       .c23 {
-        padding-top: 14pt;
-        padding-bottom: 14pt;
+        padding-top: 6pt;
+        padding-bottom: 6pt;
         line-height: 1.5;
         orphans: 2;
         widows: 2;
         text-align: left;
       }
       .c30 {
-        color: #000000;
+        color: #cccccc;
         font-weight: 400;
         text-decoration: none;
         vertical-align: baseline;
@@ -759,16 +759,16 @@ tags:
         text-align: left;
       }
       .c6 {
-        padding-top: 9pt;
-        padding-bottom: 9pt;
+        padding-top: 3pt;
+        padding-bottom: 3pt;
         line-height: 1.5;
         orphans: 2;
         widows: 2;
         text-align: justify;
       }
       .c18 {
-        padding-top: 14pt;
-        padding-bottom: 14pt;
+        padding-top: 6pt;
+        padding-bottom: 6pt;
         line-height: 1.5;
         orphans: 2;
         widows: 2;
@@ -782,7 +782,7 @@ tags:
         font-style: normal;
       }
       .c15 {
-        color: #3f4549;
+        color: #f0f0f0;
         text-decoration: none;
         vertical-align: baseline;
         font-style: normal;
@@ -802,13 +802,26 @@ tags:
         font-size: 13pt;
         font-weight: 700;
         font-family: "Garamond";
+        color: #f0f0f0;
+      }
+      sup .c9 {
+        font-size: 9pt !important;
+      }
+      sup.c9 {
+        font-size: 9pt !important;
+      }
+      sup.c9.c32 {
+        font-size: 9pt !important;
+      }
+      sup.c9.c17.c32.c37 {
+        font-size: 9pt !important;
       }
       .c34 {
         width: 33%;
         height: 1px;
       }
       .c37 {
-        color: #000000;
+        color: #cccccc;
         text-decoration: none;
       }
       .c31 {
@@ -823,7 +836,7 @@ tags:
         padding-left: 0pt;
       }
       .c38 {
-        color: #000000;
+        color: #cccccc;
       }
       .c20 {
         height: 12pt;
@@ -836,11 +849,11 @@ tags:
       }
       .title {
         padding-top: 24pt;
-        color: #000000;
+        color: #cccccc;
         font-weight: 700;
         font-size: 36pt;
         padding-bottom: 6pt;
-        font-family: "Calibri";
+        font-family: "Calibri"; color: #cccccc;
         line-height: 1;
         page-break-after: avoid;
         orphans: 2;
@@ -861,23 +874,23 @@ tags:
         text-align: left;
       }
       li {
-        color: #000000;
+        color: #cccccc;
         font-size: 12pt;
-        font-family: "Calibri";
+        font-family: "Calibri"; color: #cccccc;
       }
       p {
         margin: 0;
-        color: #000000;
+        color: #cccccc;
         font-size: 12pt;
-        font-family: "Calibri";
+        font-family: "Calibri"; color: #cccccc;
       }
       h1 {
         padding-top: 24pt;
-        color: #000000;
+        color: #cccccc;
         font-weight: 700;
         font-size: 24pt;
         padding-bottom: 6pt;
-        font-family: "Calibri";
+        font-family: "Calibri"; color: #cccccc;
         line-height: 1;
         page-break-after: avoid;
         orphans: 2;
@@ -886,11 +899,11 @@ tags:
       }
       h2 {
         padding-top: 18pt;
-        color: #000000;
+        color: #cccccc;
         font-weight: 700;
         font-size: 18pt;
         padding-bottom: 4pt;
-        font-family: "Calibri";
+        font-family: "Calibri"; color: #cccccc;
         line-height: 1;
         page-break-after: avoid;
         orphans: 2;
@@ -898,12 +911,12 @@ tags:
         text-align: left;
       }
       h3 {
-        padding-top: 14pt;
-        color: #000000;
+        padding-top: 6pt;
+        color: #cccccc;
         font-weight: 700;
         font-size: 14pt;
         padding-bottom: 4pt;
-        font-family: "Calibri";
+        font-family: "Calibri"; color: #cccccc;
         line-height: 1;
         page-break-after: avoid;
         orphans: 2;
@@ -912,11 +925,11 @@ tags:
       }
       h4 {
         padding-top: 12pt;
-        color: #000000;
+        color: #cccccc;
         font-weight: 700;
         font-size: 12pt;
         padding-bottom: 2pt;
-        font-family: "Calibri";
+        font-family: "Calibri"; color: #cccccc;
         line-height: 1;
         page-break-after: avoid;
         orphans: 2;
@@ -925,11 +938,11 @@ tags:
       }
       h5 {
         padding-top: 11pt;
-        color: #000000;
+        color: #cccccc;
         font-weight: 700;
         font-size: 11pt;
         padding-bottom: 2pt;
-        font-family: "Calibri";
+        font-family: "Calibri"; color: #cccccc;
         line-height: 1;
         page-break-after: avoid;
         orphans: 2;
@@ -938,11 +951,11 @@ tags:
       }
       h6 {
         padding-top: 10pt;
-        color: #000000;
+        color: #cccccc;
         font-weight: 700;
         font-size: 10pt;
         padding-bottom: 2pt;
-        font-family: "Calibri";
+        font-family: "Calibri"; color: #cccccc;
         line-height: 1;
         page-break-after: avoid;
         orphans: 2;
