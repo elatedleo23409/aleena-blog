@@ -169,7 +169,7 @@ const posts = (await getCollection('blog')).sort(
 				<p class="hero-subtitle">
 					Exploring the intersection of law, culture, and social justice through thoughtful analysis and advocacy.
 				</p>
-				<a href="/aleena-blog/blog/" class="cta-button">Explore My Writings</a>
+				<a href="/blog/" class="cta-button">Explore My Writings</a>
 			</div>
 		</section>
 		
@@ -181,7 +181,7 @@ const posts = (await getCollection('blog')).sort(
 					<div class="posts-grid">
 						{posts.map((post) => (
 							<article class="post-card">
-								<a href={`/aleena-blog/blog/${post.id}/`}>
+								<a href={`/blog/${post.id}/`}>
 									{post.data.heroImage && (
 										<Image 
 											width={400} 
@@ -214,7 +214,7 @@ const posts = (await getCollection('blog')).sort(
 					Through my writing and legal practice, I advocate for the protection of traditional cultural expressions and explore 
 					frameworks that honor India's diverse artistic legacy.
 				</p>
-				<a href="/aleena-blog/about/" class="cta-button">Learn More About Me</a>
+				<a href="/about/" class="cta-button">Learn More About Me</a>
 			</div>
 		</section>
 		

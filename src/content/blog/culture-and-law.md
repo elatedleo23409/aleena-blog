@@ -1464,7 +1464,7 @@ tags:
         "
         ><img
           alt=""
-          src="/aleena-blog/images/image1.jpg"
+          src="/images/image1.jpg"
           style="
             width: 217.35px;
             height: 314.93px;
@@ -1502,7 +1502,7 @@ tags:
         "
         ><img
           alt=""
-          src="/aleena-blog/images/image3.jpg"
+          src="/images/image3.jpg"
           style="
             width: 455.04px;
             height: 328.46px;
@@ -1543,7 +1543,7 @@ tags:
         "
         ><img
           alt=""
-          src="/aleena-blog/images/image2.jpg"
+          src="/images/image2.jpg"
           style="
             width: 448.97px;
             height: 299.19px;

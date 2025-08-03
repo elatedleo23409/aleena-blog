@@ -197,7 +197,7 @@ const posts = (await getCollection('blog')).sort(
 					<!-- Featured Post (First Post) -->
 					{posts[0] && (
 						<article class="featured-post">
-							<a href={`${import.meta.env.BASE_URL}/blog/${posts[0].id}/`}>
+							<a href={`/blog/${posts[0].id}/`}>
 								{posts[0].data.heroImage && (
 									<Image width={800} height={300} src={posts[0].data.heroImage} alt="" />
 								)}
@@ -217,7 +217,7 @@ const posts = (await getCollection('blog')).sort(
 						<div class="posts-grid">
 							{posts.slice(1).map((post) => (
 								<article class="post-card">
-									<a href={`${import.meta.env.BASE_URL}/blog/${post.id}/`}>
+									<a href={`/blog/${post.id}/`}>
 										{post.data.heroImage && (
 											<Image width={400} height={200} src={post.data.heroImage} alt="" />
 										)}
