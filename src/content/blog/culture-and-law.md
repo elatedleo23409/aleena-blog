@@ -1,3 +1,20 @@
+---
+title: "Restoring What Law Erased: Leadership at the Intersection of Culture and Law"
+pubDate: "2025-08-02"
+description: "A deep exploration of how the Madras Devadasi Act of 1947 transformed cultural identity and artistic expression, and the ongoing fight for cultural justice in India."
+author: "Aleena"
+tags:
+  [
+    "law",
+    "culture",
+    "dance",
+    "devadasi",
+    "bharatanatyam",
+    "justice",
+    "heritage",
+  ]
+---
+
 <html>
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
