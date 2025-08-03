@@ -37,7 +37,6 @@ import HeaderLink from './HeaderLink.astro';
 	header {
 		background: rgba(10, 10, 10, 0.95);
 		backdrop-filter: blur(20px);
-		border-bottom: 1px solid var(--border-color);
 		position: sticky;
 		top: 0;
 		z-index: 100;
@@ -57,6 +56,8 @@ import HeaderLink from './HeaderLink.astro';
 		margin: 0;
 		font-size: 1.5rem;
 		font-weight: 700;
+		border-bottom: none;
+		padding-bottom: 0;
 	}
 
 	h2 a {
